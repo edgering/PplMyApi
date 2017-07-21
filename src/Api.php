@@ -106,7 +106,7 @@ class Api
      * @throws OfflineException
      * @throws SecurityException
      */
-    public function __construct($username = null, $password = null, $customerId = null)
+    public function __construct($username = null, $password = null, $customerId = null, $securedStorage = null)
     {
         if (strlen($username) > 32) {
             throw new SecurityException('$username is longer then 32 characters');
@@ -120,7 +120,14 @@ class Api
         $this->password = $password;
         $this->customerId = $customerId;
 
-        $this->securedStorage = sys_get_temp_dir() . '/' . __CLASS__;
+        if ($securedStorage === NULL)
+        {
+          $this->securedStorage = sys_get_temp_dir() . '/' . __CLASS__;
+        }
+        else
+        {
+          $this->securedStorage = $securedStorage . '/' . __CLASS__;
+        }
 
         try {
             $this->soap = new \SoapClient($this->wsdl);
