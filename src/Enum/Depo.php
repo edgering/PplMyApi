@@ -1,6 +1,23 @@
 <?php
 /**
  * Copyright (C) 2016 Adam Schubert <adam.schubert@sg1-game.net>.
+ *
+ * DEPOTS:
+ * -------------------
+ * 01 Praha východ
+ * 02 České Budějovice 
+ * 03 Plzeň
+ * 04 Teplice
+ * 05 Hradec Králové
+ * 06 Brno 
+ * 07 Ostrava
+ * 08 Zlín - Malenovice
+ * 09 Olomouc
+ * 10 Praha západ
+ * 11 Liberec 
+ * 12 Humpolec
+ * 14 Praha sever  
+ *
  */
 
 namespace Salamek\PplMyApi\Enum;
