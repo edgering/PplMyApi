@@ -126,7 +126,7 @@ class Api
         }
         else
         {
-          $this->securedStorage = $securedStorage . '/' . __CLASS__;
+          $this->securedStorage = $securedStorage;
         }
 
         try {
