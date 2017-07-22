@@ -256,7 +256,14 @@ class Api
             ]
         ]);
 
-        return $result->GetPackagesResult->ResultData->MyApiPackageOut;
+        if (property_exists($result->GetPackagesResult->ResultData,"MyApiPackageOut"))
+        {
+          return $result->GetPackagesResult->ResultData->MyApiPackageOut;
+        }
+        else
+        {
+          return false;
+        }    
     }
 
     /**
