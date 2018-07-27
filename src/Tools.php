@@ -62,9 +62,8 @@ class Tools
         $list = [
             $packageIdentifierPackageProductType,
             $package->getDepoCode(),
-            (in_array($package->getPackageProductType(), Product::$cashOnDelivery) ? '9' : '5'),
-            0,
-            str_pad($package->getSeriesNumberId(), 6, '0', STR_PAD_LEFT)
+            (in_array($package->getPackageProductType(), Product::$cashOnDelivery) ? '9' : '5'),            
+            str_pad($package->getSeriesNumberId(), 7, '0', STR_PAD_LEFT)
         ];
 
         $identifier = implode('', $list);
